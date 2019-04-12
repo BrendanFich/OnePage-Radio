@@ -70,7 +70,7 @@ var Footer = {
   },
   render: function(){
     var _this = this
-    $.getJSON('https://jirenguapi.applinzi.com/fm/getChannels.php')
+    $.getJSON('//jirenguapi.applinzi.com/fm/getChannels.php')
     .done(function(ret){
       _this.renderFooter(ret.channels)
     }).fail(function(){
@@ -140,7 +140,7 @@ var Fm = {
   },
   loadMusic: function(origin){
     var _this = this
-    $.getJSON('//api.jirengu.com/fm/getSong.php',{channel: origin || _this.channelId}).done(function(ret){
+    $.getJSON('//jirenguapi.applinzi.com/fm/getSong.php',{channel: origin || _this.channelId}).done(function(ret){
       _this.song = ret['song'][0]
       _this.loadLyric()
       _this.setMusic()
@@ -158,7 +158,7 @@ var Fm = {
   loadLyric: function(){
     var _this = this
     var lyricObj = {}
-    $.getJSON('//api.jirengu.com/fm/getLyric.php',{sid: _this.song.sid}).done(function(ret){
+    $.getJSON('//jirenguapi.applinzi.com/fm/getLyric.php',{sid: _this.song.sid}).done(function(ret){
       ret.lyric.split('\n').forEach(function(line){
         var times = line.match(/\d{2}:\d{2}/g)
         var str = line.replace(/\[.+?\]/g, '')
