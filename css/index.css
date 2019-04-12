@@ -40,7 +40,7 @@ html, body, section {
 	bottom: -10px;
 	left: -10px;
 	right: -10px;
-	background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big) center center no-repeat;
+	background: url() center center no-repeat;
 	background-size: cover;
 	filter: blur(4px);
 }
@@ -73,7 +73,7 @@ main .aside {
 main .aside > figure {
 	width: 46vh;
 	height: 46vh;
-	background-image: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle);
+	background-image: url();
 	background-size: cover;
 	position-position: center center;
 }
@@ -84,6 +84,7 @@ main .aside .actions {
 
 main .aside .iconfont {
 	flex: 1;
+	margin-top: 5vh;
 	text-align: center;
 	font-size: 5vh;
 	color: rgba(255,255,255,0.4);
@@ -114,7 +115,7 @@ main .details h1 {
 main .icons {
 	display: flex;
 	font-size: 3vh;
-	margin-top: 12vh;
+	margin-top: 8vh;
 }
 
 main .icons li {
@@ -127,7 +128,7 @@ main .icons .iconfont {
 }
 
 main .area-bar {
-	margin-top: 10vh;
+	margin-top: 12vh;
 	display: flex;
 	align-items: center;
 }
@@ -145,7 +146,8 @@ main .area-bar .bar-progress {
 	height: .8vh;
 	border-radius: .2vh;
 	background-color: #fff;
-	width: 25%;
+	width: 0%;
+	transition: width 0.5s;
 }
 
 main .area-bar .current-time {
@@ -183,7 +185,6 @@ footer .box {
 }
 
 footer ul {
-	
 	position: absolute;
 	left: 0;
 }
